@@ -1,0 +1,121 @@
+.datepicker {
+	position: relative;
+  min-width: 150px;
+	cursor: pointer;
+	user-select: none;
+}
+
+
+
+.datepicker .selected{
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.datepicker .selected-date{
+  padding-right: 2px;
+  color: #111111;
+
+}
+
+.datepicker .selected:hover{
+  background-color: #919191;
+}
+
+.datepicker .selected-time{
+  padding-left: 2px;
+}
+
+.datepicker .dates {
+  display: none;
+  top: 100%;
+  left: 0;
+  right: 0;
+  
+  background-color: #e2e2e2;
+}
+
+.datepicker .dates.active{
+  display: contents;
+  border: solid #eeeeee 2px;
+}
+
+.datepicker .dates .month{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: Solid #eeeeee 1px;
+  background-color: #009D9E;
+  color: white;
+  font-weight: 600;
+  height: 30px;
+}
+
+.datepicker .dates .month .arrows{
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 5px;
+}
+
+.datepicker .dates .month .arrows:hover{
+  background-color: #0d47a1
+}
+
+.datepicker .dates .month .arrows:active{
+  background-color: #00ca85;
+}
+
+.datepicker .dates .days, .datepicker .dates .weekdays{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 200px;
+}
+
+.datepicker .dates .weekdays{
+  height: 15%;
+  cursor:default;
+}
+
+.datepicker .dates .days .day, .datepicker .dates .days .filler{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid rgb(150, 150, 150) 1px;
+  border-left: solid rgb(150, 150, 150) 1px;
+}
+
+.datepicker .dates .days .filler{
+  color:rgb(143, 143, 143);
+
+  
+  cursor: default;
+  background-color: rgb(200, 200, 200);
+}
+
+.datepicker .dates .days .day:hover{
+  background-color: #d3d3d3;
+}
+
+.datepicker .dates .days .day.selected{
+  background-color: #00ca85;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  border-bottom: solid 2px #d3d3d3;
+}
+
+
+.weekdays div {
+  
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
